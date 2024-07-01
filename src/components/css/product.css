@@ -1,0 +1,225 @@
+.product-page{
+
+}
+
+.product-page>img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.product-page .product-content{
+    margin-top: -50px;
+    background-color: #fff;
+    z-index: 2;
+    position: relative;
+    padding: 25px;
+    border-radius: 50px 50px 0 0;
+    direction: rtl;
+}
+
+
+.product-page .product-content h1{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+
+
+
+.product-page .product-content .rate h3{
+    margin-bottom: 18px;
+    font-size: 19px;
+    color: #FFC107;
+}
+
+
+.product-page .product-content .rate h3 span{
+    font-size: 16px;
+    color: #ababab;
+}
+
+
+.product-page .product-content .add-min{
+    
+}
+
+.product-page .product-content .add-min h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.product-page .product-content .add-min div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-page .product-content .add-min div button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.product-page .product-content .add-min div span{
+    font-size: 35px;
+    color: #000;
+}
+
+
+
+.product-page .product-content .integ h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+.product-page .product-content .integ ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0000001c;
+}
+
+.product-page .product-content .integ ul li div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.product-page .product-content .integ ul li div input{
+    width: 17px;
+    height: 18px;
+}
+
+
+
+.product-page .product-content .options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+.product-page .product-content .options button{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 15px;
+    flex-direction: row-reverse;
+}
+
+.product-page .product-content .options h4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+
+.product-page .product-content .options h4 span{ 
+    font-size: 17px;
+    font-weight: 500;
+    color: #a8a8a8;
+}
+
+.product-page .whatsin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+
+.product-page .whatsin span {
+    display: list-item;
+    margin-right: 21px;
+}
+
+.star-rating h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+
+.star-rating{
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.star-rating>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+}
+
+
+.star-rating button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 31px;
+}
+
+.star-rating .on .star {
+    color: gold;
+}
+
+.star-rating .off .star {
+    color: grey;
+}

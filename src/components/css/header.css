@@ -1,0 +1,114 @@
+.header{
+    position: relative;
+    height: 200px;
+}
+
+.header h1{
+    position: absolute;
+    z-index: 3;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+}
+
+.header h2{
+    position: absolute;
+    z-index: 3;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 300;
+    top: 42px;
+    right: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+
+}
+
+
+
+.header .overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ad;
+    z-index: 2;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2329306722689075) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.header .images-slider{
+    height: 100%;
+}
+.header .images-slider .swiper-slide{
+    width: inherit !important;
+}
+.header .images-slider .slider{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.header .images-slider .slider img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+.header .header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -75px;
+    z-index: 15;
+    position: relative;
+}
+
+
+.header .header-content .logo{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+.header .header-content .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header .header-content ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #000;
+    margin-top: 18px;
+}
+
+
+
+
+.header .header-content ul li a{
+    color: #000;
+}
+

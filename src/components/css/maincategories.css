@@ -1,0 +1,43 @@
+
+.main-categories .category{
+    position: relative;
+    height: 280px;
+    width: 250px;
+    margin-right: 15px;
+}
+
+
+
+.main-categories .category a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.main-categories .category a .text{
+    background-color: #ffffff8c;
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.main-categories .category a .text h2{
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #000;
+    text-align: right;
+}
+.main-categories .category a .text h3{
+    text-align: right;
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 2px;
+}
