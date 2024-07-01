@@ -51,7 +51,7 @@ function CategoriesSlider() {
                             {categories.map((category) => (
                                 <SwiperSlide key={category.id}>
                                     <div className='category'>
-                                        <RouterLink to={`category?id=${category.id}`}>
+                                        <RouterLink to={`/kroo-qr-menu/category?id=${category.id}`}>
                                             <img src={category.img} alt={category.name} />
                                             <h2>{category.name}</h2>
                                         </RouterLink>

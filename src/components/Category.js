@@ -143,7 +143,7 @@ function Category() {
                         {filteredProducts.map(product => (
                             <div key={product.id} className='col-lg-4 col-md-12 col-sm-12 col-12'>
                                 <div className='cat-product'>
-                                    <RouterLink to="product">
+                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
                                         <img 
                                             src={product.img} 
                                             alt='product img' 
@@ -151,7 +151,7 @@ function Category() {
                                         />
                                     </RouterLink>
                                     <div className='text'>
-                                        <RouterLink to="product">
+                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
                                             <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
