@@ -59,7 +59,7 @@ function DownNav() {
                     <div className='nav-content'>
                         <ul>
                             <li>
-                                <RouterLink className={isActive('/')} to="/">
+                                <RouterLink className={isActive('/kroo-qr-menu/')} to="/kroo-qr-menu/">
                                     <i className="las la-home"></i>
                                     Home
                                 </RouterLink>
@@ -78,7 +78,7 @@ function DownNav() {
                             </li>
                             <li>
                                 <span className='num-products'>{numBookmarkedProducts}</span>
-                                <RouterLink className={isActive('bookmark')} to="/bookmark">
+                                <RouterLink className={isActive('/kroo-qr-menu/bookmark')} to="/kroo-qr-menu/bookmark">
                                     <i className="las la-bookmark"></i>
                                     Your Orders
                                 </RouterLink>

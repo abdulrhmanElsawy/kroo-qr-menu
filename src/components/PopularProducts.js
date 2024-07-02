@@ -110,7 +110,7 @@ function PopularProducts() {
                                         />
                                     </RouterLink>
                                     <div className='text'>
-                                        <RouterLink to={`/product?id=${product.id}`}>
+                                        <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
                                             <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
@@ -118,7 +118,7 @@ function PopularProducts() {
                                         </div>
                                         <div className='options'>
                                             <h4 className='price'> <span> L.E </span> {product.price} </h4>
-                                            <RouterLink to={`/product?id=${product.id}`}>
+                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
                                             <i className="las la-plus"></i></RouterLink>
                                         </div>
                                     </div>
