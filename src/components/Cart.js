@@ -62,10 +62,12 @@ function Cart() {
                                         <div className='options'>
                                             <h4 className='price'> <span> L.E </span> {item.price} </h4>
                                         </div>
+
+                                        <span className='quantity-features'> {item.features} </span>
+
                                     </div>
                                 </div>
 
-                                <span className='quantity'> {item.features} </span>
 
                             </div>
                         ))}
