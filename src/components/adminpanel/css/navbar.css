@@ -1,0 +1,231 @@
+nav{
+    border-bottom: 1px solid #00000075;
+    background-color: #fff;
+}
+
+nav .nav-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    border-bottom: 1px solid #0000002e;
+    height: 65px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    z-index: 15;
+    transition: 0.3s;
+
+
+}
+
+nav .nav-content .search{
+    position: relative;
+    margin-left: 50px;
+}
+
+nav .nav-content .search button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: #6e6e6e;
+    left: 8px;
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+
+}
+
+nav .nav-content .search input{
+    background-color: #eee;
+    border: none;
+    outline: none;
+    width: 340px;
+    height: 35px;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+
+nav .nav-content .nav-settings{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+nav .nav-content .nav-settings button{
+    outline: none;
+    border: none;
+    color: #6d6d6d;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 8px;
+    position: relative;
+}
+
+
+nav .nav-content .nav-settings a{
+    outline: none;
+    border: none;
+    color: #6d6d6d;
+    font-size: 18px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .nav-content .nav-settings button span.number{
+    position: absolute;
+    font-size: 11px;
+    background-color: #1791c8;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    width: 23px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    top: -6px;
+    right: -13px;
+}
+
+nav .nav-content .nav-settings a span.number{
+    position: absolute;
+    font-size: 11px;
+    background-color: #1791c8;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    width: 23px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    top: -6px;
+    right: -13px;
+}
+
+
+
+nav .nav-content .nav-settings .user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+
+nav .nav-content .nav-settings .user-info img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+nav .nav-content .nav-settings .user-info .info h3{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+nav .nav-content .nav-settings .user-info .info h4{
+    font-size: 13px;
+    font-weight: 300;
+    color: #000;
+}
+
+nav .nav-content .nav-settings .user-info button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 18px;
+}
+
+nav .nav-content .nav-settings .user-info a{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+nav .nav-content.active {
+
+    width: 97%;
+}
+
+@media(max-width:950px){
+    nav .nav-content.active {
+        width: 94%;
+    }
+
+    nav .nav-content .search input {
+        background-color: #eee;
+        border: none;
+        outline: none;
+        width: 264px;
+        height: 35px;
+        border-radius: 50px;
+        padding-left: 30px;
+        font-size: 14px;
+        color: #000;
+    }
+
+    nav .nav-content .nav-settings {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 9px;
+    }
+    nav .nav-content .nav-settings .user-info img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    nav .nav-content .nav-settings .user-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+}

@@ -117,8 +117,9 @@ function PopularProducts() {
                                             <h3><i className="las la-star"></i> {product.rating} <span> ({product.reviews}) </span></h3>
                                         </div>
                                         <div className='options'>
-                                            <h4 className='price'> <span> l.e </span> {product.price} </h4>
-                                            <button className='add-product-to-bookmark' onClick={() => handleBookmark(product)}> <i className="las la-plus"></i> </button>
+                                            <h4 className='price'> <span> L.E </span> {product.price} </h4>
+                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <i className="las la-plus"></i></RouterLink>
                                         </div>
                                     </div>
                                 </div>

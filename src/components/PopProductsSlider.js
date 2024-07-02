@@ -41,25 +41,28 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 
 function PopProductsSlider() {
-    const [bookmarkedProducts, setBookmarkedProducts] = useState([]);
+    const [bookmarkedProducts, setBookmarkedProducts] = useState(() => {
+        const saved = localStorage.getItem('bookmarkedProducts');
+        return saved ? JSON.parse(saved) : [];
+    });
+    
     const [animateProduct, setAnimateProduct] = useState(null);
 
     useEffect(() => {
         const savedBookmarks = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-        const validBookmarks = savedBookmarks.filter(product => product.id && product.name && product.price);
+        const validBookmarks = savedBookmarks.filter(product => product.id && product.name && product.price && product.img);
         setBookmarkedProducts(validBookmarks);
     }, []);
+
     const handleBookmark = (product) => {
-        if (!product.id || !product.name || product.name == "" || product.name == null || !product.price || !product.img) {
+        if (!product.id || !product.name || !product.price || !product.img) {
             console.error('Invalid product:', product);
             return;
         }
-    
+
         // Filter out any invalid products from localStorage
         let savedBookmarks = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-        savedBookmarks = savedBookmarks.filter(item => item.img);
-
-
+        savedBookmarks = savedBookmarks.filter(item => item.id && item.name && item.price && item.img);
     
         // Add the new valid product
         let updatedBookmarks = [...savedBookmarks];
@@ -79,31 +82,26 @@ function PopProductsSlider() {
         setTimeout(() => {
             setAnimateProduct(null);
         }, 1000); // Animation duration
-    
     };
-    
 
     const products = [
-        { id: 1, name: ' espresso', price: 30, img: ProductImg1, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 2, name: ' americano', price: 50, img: ProductImg2, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 3, name: ' machiato', price: 45, img: ProductImg3, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 1, name: 'espresso', price: 30, img: ProductImg1, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 2, name: 'americano', price: 50, img: ProductImg2, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 3, name: 'machiato', price: 45, img: ProductImg3, rating: 5, reviews: 1, categoryId: 1 },
         { id: 7, name: 'cappuccino', price: 60, img: ProductImg7, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 8, name: ' latte', price: 60, img: ProductImg8, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 9, name: ' flat white', price: 65, img: ProductImg9, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 10, name: 'mocha ', price: 50, img: ProductImg10, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 11, name: ' tea', price: 20, img: ProductImg11, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 12, name: ' nescafe', price: 30, img: ProductImg12, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 14, name: 'spanish latte ', price: 65, img: ProductImg14, rating: 5, reviews: 1, categoryId: 1 },
-        { id: 15, name: ' hot chocolate', price: 60, img: ProductImg15, rating: 5, reviews: 1, categoryId: 1 },
-    
-        { id: 16, name: ' ice mocha', price: 70, img: ProductImg16, rating: 5, reviews: 1, categoryId: 2 },
-        { id: 17, name: ' ice latte', price: 65, img: ProductImg17, rating: 5, reviews: 1, categoryId: 2 },
-        { id: 18, name: ' frappuccino', price: 65, img: ProductImg18, rating: 5, reviews: 1, categoryId: 2 },
-        { id: 19, name: ' latte frappe', price: 65, img: ProductImg19, rating: 5, reviews: 1, categoryId: 2 },
-        { id: 20, name: ' mocha frappe', price: 65, img: ProductImg20, rating: 5, reviews: 1, categoryId: 2 },
-        { id: 21, name: ' smoothie', price: 60, img: ProductImg21, rating: 5, reviews: 1, categoryId: 2 },
-
-        
+        { id: 8, name: 'latte', price: 60, img: ProductImg8, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 9, name: 'flat white', price: 65, img: ProductImg9, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 10, name: 'mocha', price: 50, img: ProductImg10, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 11, name: 'tea', price: 20, img: ProductImg11, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 12, name: 'nescafe', price: 30, img: ProductImg12, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 14, name: 'spanish latte', price: 65, img: ProductImg14, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 15, name: 'hot chocolate', price: 60, img: ProductImg15, rating: 5, reviews: 1, categoryId: 1 },
+        { id: 16, name: 'ice mocha', price: 70, img: ProductImg16, rating: 5, reviews: 1, categoryId: 2 },
+        { id: 17, name: 'ice latte', price: 65, img: ProductImg17, rating: 5, reviews: 1, categoryId: 2 },
+        { id: 18, name: 'frappuccino', price: 65, img: ProductImg18, rating: 5, reviews: 1, categoryId: 2 },
+        { id: 19, name: 'latte frappe', price: 65, img: ProductImg19, rating: 5, reviews: 1, categoryId: 2 },
+        { id: 20, name: 'mocha frappe', price: 65, img: ProductImg20, rating: 5, reviews: 1, categoryId: 2 },
+        { id: 21, name: 'smoothie', price: 60, img: ProductImg21, rating: 5, reviews: 1, categoryId: 2 },
     ];
     
     return (
@@ -111,9 +109,9 @@ function PopProductsSlider() {
             <div className='container'>
                 <div className='section-header'>
                     <RouterLink to="/kroo-qr-menu/popular-products">
-                        <i className="las la-angle-left"></i> Show All 
+                        <i className="las la-angle-right"></i> Show All 
                     </RouterLink>
-                    <h1>  Popular Products </h1>
+                    <h1>Popular Products</h1>
                 </div>
                 <div className='pop-products-slider'>
                     <Swiper
@@ -130,22 +128,22 @@ function PopProductsSlider() {
                         {products.map((product, index) => (
                             <SwiperSlide key={index}>
                                 <div className='product'>
-                                <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
-                                <img src={product.img} alt='product img' 
-                                        className={animateProduct === product.id ? 'animate-to-bookmark' : ''}
-
+                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                        <img src={product.img} alt='product img' 
+                                            className={animateProduct === product.id ? 'animate-to-bookmark' : ''}
                                         />
                                     </RouterLink>
                                     <div className='text'>
-                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
-                                    <h2>{product.name}</h2>
+                                        <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
-                                            <h3><i className="las la-star"></i> {product.rating} <span> ({product.reviews}) </span></h3>
+                                            <h3><i className="las la-star"></i> {product.rating} <span>({product.reviews})</span></h3>
                                         </div>
                                         <div className='options'>
-                                            <h4 className='price'><span> l.e </span> <h6> {product.price} </h6></h4>
-                                            <button className='add-product-to-bookmark' onClick={() => handleBookmark(product)}><i className="las la-plus"></i></button>
+                                            <h4 className='price'><span>L.E</span> <h6>{product.price}</h6></h4>
+                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <i className="las la-plus"></i></RouterLink>
                                         </div>
                                     </div>
                                 </div>

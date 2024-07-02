@@ -1,0 +1,604 @@
+
+.dashboard-content .page-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.dashboard-content .page-header .text h1{
+    font-size: 19px;
+    color: #000;
+}
+
+
+.dashboard-content .page-header .text h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+
+.dashboard-content .page-header .text button{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #FFC107;
+    color: #000;
+}
+
+
+
+.dashboard-content .page-header a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+    background-color: #1791c8;
+    border-radius: 5px;
+    color: #fff;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+
+.dashboard-content .dash-products{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    min-height: 540px;
+}
+
+.dashboard-content .dash-products .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.dashboard-content .dash-products .header .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.dashboard-content .dash-products .header .left .open-filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    color: #fff;
+    background-color: #1791c8;
+    transition: 0.3s;
+}
+.dashboard-content .dash-products .header .left .open-filter.active{
+    background-color: #9c0000;
+}
+
+.dashboard-content .dash-products .header .left .search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.dashboard-content .dash-products .header .left .search button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: #6e6e6e;
+    left: 8px;
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+}
+
+.dashboard-content .dash-products .header .left .search input{
+    background-color: #eee;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 35px;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #000;
+}
+
+
+
+.dashboard-content .dash-products .header .right button{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 27px;
+    margin-left: 17px;
+}
+
+.dashboard-content .dash-products .header .right button:nth-child(1){
+    color: #de0000;
+}
+
+.dashboard-content .dash-products .header .right button:nth-child(2){
+    color: #4CAF50;
+}
+
+
+
+
+.dashboard-content .dash-products .filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.dashboard-content .dash-products .filters.active{
+
+    height: 100%;
+}
+
+
+.dashboard-content .dash-products .filters select{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 237px;
+    height: 35px;
+    border-radius: 6px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #000;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #0000004f;
+    cursor: pointer;
+}
+
+
+.dashboard-content .dash-products .filters input {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 237px;
+    height: 35px;
+    border-radius: 6px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #000;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 15px;
+    border: 1px solid #0000004f;
+}
+
+.dashboard-content .dash-products .filters button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    color: #fff;
+    background-color: #1791c8;
+}
+
+.dashboard-content .dash-products table td {
+    position: relative;
+}
+
+.dashboard-content .dash-products table td a{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+.dashboard-content .dash-products table td a:nth-child(1){
+    color: #000;
+}
+
+.dashboard-content .dash-products table td a:nth-child(2){
+    color: #2196F3;
+}
+
+.dashboard-content .dash-products table td a:nth-child(3){
+    color: #c71205;
+}
+
+
+.table-pages-num{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+.table-pages-num .show-per-page{
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+}
+
+
+.page-num{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-num button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    color: #fff;
+    background-color: #1791c8;
+}
+
+.page-num>div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dashboard-content .dash-products table td h3.Pending{
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #ea5455;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.dashboard-content .dash-products table td h3.completed,
+.dashboard-content .dash-products table td h3.paid,
+.dashboard-content .dash-products table td h3.Have,
+.dashboard-content .dash-products table td h3.Received{
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #28c76f;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.dashboard-content .dash-products table td h3.due,
+.dashboard-content .dash-products table td h3.Full,
+.dashboard-content .dash-products table td h3.pending,
+.dashboard-content .dash-products table td h3.Returned
+
+
+    {
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #ea5455;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+
+
+.dashboard-content .dash-products table td h3.Ordered
+
+    {
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #ea5455;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+
+.dashboard-content .dash-products table td h3.Paid{
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #28c76f;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.dashboard-content .dash-products table td h3.Due {
+    font-size: 11px;
+    width: 90px;
+    height: 30px;
+    background-color: #ea5455;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.dashboard-content .dash-products table td button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.dashboard-content .dash-products table td ul{
+    display: block;
+    position: absolute;
+    left: -175px;
+    top: 43px;
+    width: 190px;
+    padding: 15px !important;
+    background-color: #fff;
+    border: 1px solid #00000036;
+    z-index: 7;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+
+.dashboard-content .dash-products table td ul li{
+    position: relative;
+}
+
+
+
+.dashboard-content .dash-products table td ul li a{
+    color: #595959 !important;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+}
+
+.dashboard-content .dash-products table td ul.active{
+    opacity: 1;
+    user-select: inherit;
+    pointer-events: inherit;
+}
+
+
+
+
+@media(max-width:950px){
+    .dashboard-content .page-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-left: 5%;
+    }
+
+    .dashboard-content .dash-products .header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        gap: 22px;
+    }
+
+    .table-pages-num {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 13px;
+        margin-bottom: 26px;
+    }
+
+    .dashboard-content .dash-products .filters {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        gap: 27px;
+    }
+
+    .dashboard-content .dash-products .filters.active {
+        height: fit-content;
+    }
+}
+
+.show-select-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.show-select-products .product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #00000017;
+    padding: 5px;
+    border-radius: 54px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.show-select-products .product img{
+    width: 59px;
+    height: 59px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.show-select-products .product h3{
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.edit-selected-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+.edit-selected-products .product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #1791c880;
+    padding: 5px;
+    border-radius: 54px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.edit-selected-products .product .product-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-selected-products .product .product-info img{
+    width: 59px;
+    height: 59px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+.edit-selected-products .product .product-info h3{
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.edit-selected-products .product .change-quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-selected-products .product .change-quantity button{
+    background-color: #1791c8;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-selected-products .product .pricing-calcs{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.edit-selected-products .product .pricing-calcs span{
+    color: #7d7d7d;
+    font-weight: 500;
+}

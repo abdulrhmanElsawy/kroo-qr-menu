@@ -143,13 +143,13 @@ function CatProducts() {
 
     return (
         <>
-            <section className='cat-products'>
+            <section className='cat-products search-container-ele'>
                 <div className='container'>
                     {categories.map(category => (
                         <div key={category.id} className='category-section'>
                             <div className='section-header'>
                                 <RouterLink to={`/kroo-qr-menu/category?id=${category.id}`}>
-                                    <i className="las la-angle-left"></i> show all
+                                    <i className="las la-angle-right"></i> show all
                                 </RouterLink>
                                 <h1>{category.name}</h1>
                             </div>
@@ -162,7 +162,7 @@ function CatProducts() {
                                                     className={animateProduct === product.id ? 'animate-to-bookmark' : ''} />
                                             </RouterLink>
                                             <div className='text'>
-                                                <RouterLink to={`/kroo-qr-menu/product/${product.id}`}>
+                                                <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
                                                     <h2>{product.name}</h2>
                                                 </RouterLink>
                                                 <div className='rate'>
@@ -172,11 +172,10 @@ function CatProducts() {
                                                 </div>
                                                 <div className='options'>
                                                     <h4 className='price'>
-                                                        <span> جم </span> <h6>{product.price}</h6>
+                                                        <span> L.E </span> <h6>{product.price}</h6>
                                                     </h4>
-                                                    <button className='add-product-to-bookmark'>
-                                                        <i className="las la-plus"></i>
-                                                    </button>
+                                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                                    <i className="las la-plus"></i></RouterLink>
                                                 </div>
                                             </div>
                                         </div>

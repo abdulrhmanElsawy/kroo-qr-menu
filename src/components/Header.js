@@ -72,7 +72,7 @@ function Header(){
                             
                         <ul>
                             <li>
-                                <a href='#' target='_blnak'>
+                                <a href='https://www.google.com/maps/place/KROO+Creative+Collective/@30.0907085,31.323541,15z/data=!4m6!3m5!1s0x647b0dba92c895c3:0xcd024e50a1729723!8m2!3d30.0907085!4d31.323541!16s%2Fg%2F11tt47yj50?entry=tts&g_ep=EgoyMDI0MDYyNi4wKgksMTAyMTA0NTBIAVAD' target='_blnak'>
                                     <i class="fa-solid fa-location-dot"></i>
                                 </a>
                             </li>

@@ -38,8 +38,7 @@ ul{
 
 button{
 
-  background-color: #ffc83d !important;
-  color: #241f21 !important;
+
 
 
 }
@@ -52,6 +51,7 @@ button{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  direction: rtl;
 }
 
 
@@ -92,17 +92,19 @@ button{
 }
 
 
-.product .text{
-
+.product .text {
+  direction: rtl;
+  direction: rtl;
   padding: 15px;
 }
 
 
 .product .text a h2{
-  text-align: right;
+  text-align: left;
   font-size: 18px;
   font-weight: 700;
   color: #000;
+  text-transform: capitalize;
 }
 
 .product .text .rate{
@@ -111,7 +113,7 @@ button{
   align-items: center;
   justify-content: flex-end;
   margin-top: 15px;
-  direction: rtl;
+  direction: ltr;
 }
 
 .product .text .rate h3{
@@ -131,6 +133,7 @@ button{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 18px;
 }
 
 .product .text .options h4{
@@ -143,6 +146,7 @@ button{
   flex-direction: row-reverse;
   gap: 5px;
   align-items: flex-end;
+  direction: ltr;
 }
 
 .product .text .options h4 span{
@@ -151,7 +155,7 @@ button{
 }
 
 
-.product .text .options button{
+.product .text .options a{
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -164,6 +168,8 @@ button{
   align-items: center;
   justify-content: center;
   font-size: 23px;
+  background-color: #ffc83d !important;
+  color: #241f21 !important;
 }
 
 
@@ -200,16 +206,20 @@ button{
 }
 
 
-.cat-product .text a h2{
+.cat-product .text a h2 {
   font-size: 18px;
   font-weight: 700;
   color: #000;
+  text-align: left;
+  text-transform: capitalize;
 }
-
 
 .cat-product .text .rate h3{
   font-size: 22px;
   color: #FF9800;
+  direction: ltr;
+  text-align: left;
+
 }
 
 
@@ -219,14 +229,15 @@ button{
 }
 
 
-.cat-product .text .options{
+.cat-product .text .options {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  direction: rtl;
 }
 
-.cat-product .text .options h4{
+.cat-product .text .options h4 {
   font-size: 25px;
   font-weight: 600;
   color: #000;
@@ -236,6 +247,7 @@ button{
   flex-direction: row-reverse;
   gap: 5px;
   align-items: flex-end;
+  direction: ltr;
 }
 
 .cat-product .text .options h4 span{
@@ -244,7 +256,7 @@ button{
 }
 
 
-.cat-product .text .options button{
+.cat-product .text .options a{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -257,6 +269,8 @@ button{
   align-items: center;
   justify-content: center;
   font-size: 23px;
+  background-color: #ffc83d !important;
+  color: #241f21 !important;
 }
 
 
@@ -266,7 +280,7 @@ button{
 @media(max-width:900px){
   .product {
     width: 318px;
-    height: 320px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -279,7 +293,7 @@ button{
 @media(max-width:550px){
   .product {
     width: 280px;
-    height: 333px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -24,28 +24,35 @@
     font-size: 24px;
     font-weight: 600;
     color: #000;
+    text-align: left;
+    text-transform: capitalize;
 }
 
 
 
 
-.product-page .product-content .rate h3{
+.product-page .product-content .rate h3 {
     margin-bottom: 18px;
     font-size: 19px;
     color: #FFC107;
+    text-align: left;
+    direction: ltr;
 }
-
 
 .product-page .product-content .rate h3 span{
     font-size: 16px;
     color: #ababab;
 }
-
-
-.product-page .product-content .add-min{
-    
+.integ{
+    direction: ltr;
 }
 
+.product-page .product-content .add-min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .product-page .product-content .add-min h2{
     font-size: 20px;
     font-weight: 900;
@@ -78,13 +85,14 @@
 }
 
 
-
-.product-page .product-content .integ h2{
-    font-size: 20px;
+.product-page .product-content .integ h2 {
+    font-size: 25px;
     font-weight: 900;
     color: #000;
     margin-bottom: 20px;
     margin-top: 30px;
+    text-transform: capitalize;
+    margin-top: 50px;
 }
 
 
@@ -116,14 +124,14 @@
 
 
 
-.product-page .product-content .options{
+.product-page .product-content .options {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
+    direction: ltr;
 }
-
 
 .product-page .product-content .options button{
     padding: 10px;
@@ -167,6 +175,7 @@
     align-items: center;
     gap: 5px;
     flex-wrap: wrap;
+    direction: ltr;
 }
 
 

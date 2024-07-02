@@ -97,25 +97,34 @@ function Category() {
     const categoryId = queryParams.get('id');
 
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [filteredCat, setFilteredCategory] = useState([]);
+
     const [bookmarkedProducts, setBookmarkedProducts] = useState(() => {
         const saved = localStorage.getItem('bookmarkedProducts');
-        return saved ? JSON.parse(saved) : [];
+        const initialBookmarks = saved ? JSON.parse(saved) : [];
+        console.log('Initial Bookmarked Products:', initialBookmarks);
+        return initialBookmarks;
     });
+
 
     const [animateProduct, setAnimateProduct] = useState(null);
 
     useEffect(() => {
         const filtered = products.filter(product => product.categoryId === parseInt(categoryId));
+        const filteredcat = categories.filter(cat => cat.id === parseInt(categoryId));
+
+        setFilteredCategory(filteredcat);
+
         setFilteredProducts(filtered);
     }, [categoryId]);
 
     const handleBookmark = (product) => {
-        const existingProduct = bookmarkedProducts.find(p => p.name === product.name);
+        const existingProduct = bookmarkedProducts.find(p => p.id === product.id); // Change to check by ID instead of name
         let updatedBookmarks;
 
         if (existingProduct) {
             updatedBookmarks = bookmarkedProducts.map(p =>
-                p.name === product.name ? { ...p, quantity: p.quantity + 1 } : p
+                p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
             );
         } else {
             updatedBookmarks = [...bookmarkedProducts, { ...product, quantity: 1 }];
@@ -131,6 +140,7 @@ function Category() {
         }, 1000); // Animation duration
     };
 
+
     return (
         <>
             <section className='category'>
@@ -138,7 +148,7 @@ function Category() {
                     <div className='row search-container-ele'>
                         <div className='section-header'>
                             <RouterLink to="category"></RouterLink>
-                            <h1> أطباق نباتية </h1>
+                            <h1>{filteredCat.length? filteredCat[0].name: null}</h1>
                         </div>
                         {filteredProducts.map(product => (
                             <div key={product.id} className='col-lg-4 col-md-12 col-sm-12 col-12'>
@@ -158,8 +168,9 @@ function Category() {
                                             <h3><i className="las la-star"></i> {product.rating} <span> ({product.reviews}) </span></h3>
                                         </div>
                                         <div className='options'>
-                                            <h4 className='price'> <span> جم </span> {product.price} </h4>
-                                            <button className='add-product-to-bookmark' onClick={() => handleBookmark(product)}> <i className="las la-plus"></i> </button>
+                                            <h4 className='price'> <span> L.E </span> {product.price} </h4>
+                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <i className="las la-plus"></i></RouterLink>
                                         </div>
                                     </div>
                                 </div>

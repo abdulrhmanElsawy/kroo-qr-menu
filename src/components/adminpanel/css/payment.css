@@ -1,0 +1,183 @@
+.payments-details{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.payments-details .payment-detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px double #3c221359;
+    padding: 16px;
+    gap: 9px;
+}
+
+.payments-details .payment-detail i{
+    font-size: 50px;
+    color: #3c2213;
+}
+.payments-details .payment-detail h3{
+    font-size: 17px;
+    text-align: right;
+}
+
+
+.payment .payment-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment .payment-content .header h1{
+    margin-top: 160px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 29px;
+    font-weight: 600;
+    color: #000;
+
+}
+
+.payment .payment-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.payment .payment-content form .inputs{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.payment .payment-content form .inputs .input{
+    width: 100%;
+    direction: rtl;
+}
+
+
+.payment .payment-content form .inputs .input label{
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: right;
+}
+
+
+.payment .payment-content form .inputs .input input{
+    width: 95%;
+    height: 44px;
+    border-radius: 25px;
+    border: 1px solid #bfbfbf;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 0;
+    font-size: 18px;
+    outline: none;
+}
+
+
+.payment .payment-content form .inputs .input textarea{
+    width: 95%;
+    height: 200px;
+    border-radius: 25px;
+    border: 1px solid #bfbfbf;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 0;
+    font-size: 18px;
+    outline: none;
+}
+
+
+.payment .payment-content form button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    gap: 15px;
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+
+.payment .payment-content form .bank-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.payment .payment-content form .bank-details h1{
+    font-size: 19px;
+}
+
+.payment .payment-content form .bank-details div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    width: 96%;
+}
+
+.payment .payment-content form .bank-details div h2{
+    font-size: 17px;
+}
+
+
+.payment .payment-content form .bank-details div h2 span{
+    color: red;
+}
+
+@media(max-width:950px){
+
+    .payment .payment-content form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .payment .payment-content form .inputs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .payment .payment-content form .bank-details div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22px;
+        justify-content: space-between;
+        width: 96%;
+        flex-wrap: wrap;
+    }
+}
