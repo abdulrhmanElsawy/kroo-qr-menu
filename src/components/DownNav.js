@@ -15,7 +15,7 @@ function DownNav() {
 
     useEffect(() => {
         const handleBookmarkClick = () => {
-            window.location.reload();
+            history.push(pathname);
 
         };
 
