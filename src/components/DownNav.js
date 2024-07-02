@@ -2,13 +2,13 @@ import './css/downnav.css';
 import { Link as RouterLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function DownNav() {
     const { pathname } = useLocation();
     const [numBookmarkedProducts, setNumBookmarkedProducts] = useState(0);
     const [stateChange, setStateChange] = useState(1);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -16,8 +16,7 @@ function DownNav() {
 
     useEffect(() => {
         const handleBookmarkClick = () => {
-            history.push(pathname);
-
+            navigate(pathname);
         };
 
         $('.add-to-bookmark').click(handleBookmarkClick);
@@ -25,9 +24,8 @@ function DownNav() {
         return () => {
             $('.add-to-bookmark').off('click', handleBookmarkClick);
         };
-    }, []);
+    }, [pathname, navigate]);
 
-    
     useEffect(() => {
         const bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
         
@@ -41,17 +39,12 @@ function DownNav() {
         setNumBookmarkedProducts(totalQuantity);
     }, []);
 
-
-
-
     const location = useLocation();
     const currentPath = location.pathname;
 
     const isActive = (path) => {
         return currentPath === path ? 'active' : '';
     };
-
-
 
     return (
         <>
