@@ -332,3 +332,9 @@ button{
   bottom: 67px;
   
 }
+
+.rate h3 span {
+  color: #adadad;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+}
