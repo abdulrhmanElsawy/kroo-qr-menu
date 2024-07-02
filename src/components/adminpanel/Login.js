@@ -140,7 +140,7 @@ function Login() {
                         <button type='submit' aria-label='login btn'>Sign In</button>
                     </form>
 
-                    <h4>Don't have an account? <RouterLink to="/sign-up">Sign Up</RouterLink></h4>
+                    <h4>Don't have an account? <RouterLink to="/kroo-qr-menu/sign-up">Sign Up</RouterLink></h4>
 
                     <div className='separat'>
                         <span></span>

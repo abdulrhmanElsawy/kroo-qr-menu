@@ -95,14 +95,14 @@ function PopularProducts() {
                 <div className='container'>
                     <div className='row search-container-ele'>
                         <div className='section-header'>
-                            <RouterLink to="/category"></RouterLink>
+                            <RouterLink to="/kroo-qr-menu/category"></RouterLink>
                             <h1> Popular Products
                             </h1>
                         </div>
                         {products.map(product => (
                             <div key={product.id} className='col-lg-4 col-md-12 col-sm-12 col-12'>
                                 <div className='cat-product'>
-                                    <RouterLink to="/product">
+                                    <RouterLink to="/kroo-qr-menu/product">
                                         <img 
                                             src={product.img} 
                                             alt='product img' 

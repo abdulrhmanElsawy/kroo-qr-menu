@@ -187,7 +187,7 @@ function SideNav() {
         
                                             <ul className='sub-nav-eles'>
                                                 <li>
-                                                    <RouterLink to="/user-settings">
+                                                    <RouterLink to="/kroo-qr-menu/user-settings">
                                                         <i class="las la-ellipsis-h"></i>
                                                         General Settings
                                                     </RouterLink>

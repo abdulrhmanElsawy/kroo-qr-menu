@@ -94,7 +94,7 @@ function ResetPassword() {
                     </form>
 
                     <h4>
-                        Remembered your password? <RouterLink to="/">Sign In</RouterLink>
+                        Remembered your password? <RouterLink to="/kroo-qr-menu/">Sign In</RouterLink>
                     </h4>
                 </div>
 

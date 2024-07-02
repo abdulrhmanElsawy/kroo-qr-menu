@@ -104,7 +104,7 @@ function MainCategories() {
             <section className='main-categories'>
                 <div className='container'>
                     <div className='section-header'>
-                        <RouterLink to="/categories"></RouterLink>
+                        <RouterLink to="/kroo-qr-menu/categories"></RouterLink>
                         <h1> Categories </h1>
                     </div>
                     <div className='slider'>

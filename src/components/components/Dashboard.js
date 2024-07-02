@@ -294,7 +294,7 @@ return(
                                 <div className='dash-num'>
 
 
-                                <RouterLink to="/link">
+                                <RouterLink to="/kroo-qr-menu/link">
                                     <div className='num'>
                                         <div className='text'>
                                             <h2> {item5Count} </h2>
@@ -305,7 +305,7 @@ return(
                                     </div>
                                 </RouterLink>
 
-                                <RouterLink to="/link">
+                                <RouterLink to="/kroo-qr-menu/link">
                                     <div className='num'>
                                         <div className='text'>
                                             <h2> {item6Count} </h2>
@@ -317,7 +317,7 @@ return(
                                 </RouterLink>
 
 
-                                <RouterLink to="/link">
+                                <RouterLink to="/kroo-qr-menu/link">
                                 <div className='num'>
                                     <div className='text'>
                                         <h2> {item7Count} </h2>
@@ -329,7 +329,7 @@ return(
                                 </RouterLink>
 
 
-                                <RouterLink to="/link">
+                                <RouterLink to="/kroo-qr-menu/link">
 
                                 <div className='num'>
                                     <div className='text'>

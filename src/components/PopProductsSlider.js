@@ -108,7 +108,7 @@ function PopProductsSlider() {
         <section className='pop-products'>
             <div className='container'>
                 <div className='section-header'>
-                    <RouterLink to="/popular-products">
+                    <RouterLink to="/kroo-qr-menu/popular-products">
                         <i className="las la-angle-right"></i> Show All 
                     </RouterLink>
                     <h1>Popular Products</h1>

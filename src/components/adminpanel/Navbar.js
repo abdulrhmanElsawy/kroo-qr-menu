@@ -184,7 +184,7 @@ function Navbar(){
                             <span className='number'> {notificationsCount} </span>
                         </RouterLink>
 
-                        <RouterLink to="/user-settings" className='settings'>
+                        <RouterLink to="/kroo-qr-menu/user-settings" className='settings'>
                             <i class="las la-cog"></i>
                         </RouterLink>
 

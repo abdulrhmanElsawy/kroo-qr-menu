@@ -90,7 +90,7 @@ function ConfirmEmail(){
                     </form>
 
                     <h4>
-                        Already have an account? <RouterLink to="/"> Sign In </RouterLink>
+                        Already have an account? <RouterLink to="/kroo-qr-menu/"> Sign In </RouterLink>
                     </h4>
                 </div>
 
