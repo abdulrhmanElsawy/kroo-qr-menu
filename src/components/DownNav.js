@@ -5,12 +5,14 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 
+
 function DownNav() {
     const { pathname } = useLocation();
     const [numBookmarkedProducts, setNumBookmarkedProducts] = useState(0);
     const [bookmarkedProducts, setBookmarkedProducts] = useState(
         JSON.parse(localStorage.getItem('bookmarkedProducts')) || []
     );
+    const [isArabic, setIsArabic] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,7 +22,7 @@ function DownNav() {
         const handleBookmarkClick = () => {
             setTimeout(() => {
                 setBookmarkedProducts(JSON.parse(localStorage.getItem('bookmarkedProducts')) || []);
-            }, 300); // Timeout set to 1 second (1000 milliseconds)
+            }, 300);
         };
 
         document.querySelectorAll('.add-to-bookmark').forEach(element => {
@@ -37,7 +39,7 @@ function DownNav() {
     useEffect(() => {
         let totalQuantity = 0;
         bookmarkedProducts.forEach(product => {
-            totalQuantity += product.quantity || 0; // Ensure to handle cases where quantity may be undefined
+            totalQuantity += product.quantity || 0;
         });
         setNumBookmarkedProducts(totalQuantity);
     }, [bookmarkedProducts]);
@@ -48,6 +50,25 @@ function DownNav() {
         return currentPath === path ? 'active' : '';
     };
 
+    const toggleLanguage = () => {
+        $("#google_translate_element").toggleClass("active");
+        setTimeout(()=>{
+            $(".VIpgJd-ZVi9od-xl07Ob-OEVmcd").css("display","block");
+            $(".VIpgJd-ZVi9od-xl07Ob-OEVmcd").css("left","0px");
+            $(".VIpgJd-ZVi9od-xl07Ob-OEVmcd").css("top","34px");
+
+        },1000)
+
+
+        const googleTranslateElement = document.querySelector('#google_translate_element select');
+        if (googleTranslateElement) {
+            googleTranslateElement.value = isArabic ? 'en' : 'ar';
+            googleTranslateElement.dispatchEvent(new Event('change'));
+
+            
+        }
+        setIsArabic(!isArabic);
+    };
     return (
         <>
             <section className='down-nav'>
@@ -79,6 +100,15 @@ function DownNav() {
                                     Your Orders
                                 </RouterLink>
                             </li>
+
+                            <li>
+                                <button className="translate-to-arabic" onClick={toggleLanguage}>
+                                    <i className="las la-globe"></i>
+                                    {isArabic ? 'English' : 'العربية'}
+                                </button>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
