@@ -102,8 +102,8 @@ function PopularProducts() {
                         {products.map(product => (
                             <div key={product.id} className='col-lg-4 col-md-12 col-sm-12 col-12'>
                                 <div className='cat-product'>
-                                    <RouterLink to="/kroo-qr-menu/product">
-                                        <img 
+                                <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                <img 
                                             src={product.img} 
                                             alt='product img' 
                                             className={animateProduct === product.id ? 'animate-to-bookmark' : ''}

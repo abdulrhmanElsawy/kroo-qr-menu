@@ -163,7 +163,7 @@ function Product() {
                 quantity: quantity,
                 size: size,
                 price: totalPrice.toFixed(2),
-                link: productLink,
+                link: `${productLink}?id=${product.id}`,
                 img: productImage
             };
     

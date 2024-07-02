@@ -128,13 +128,15 @@ button{
 }
 
 
-.product .text .options{
+.product .text .options {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   margin-top: 18px;
+  direction: ltr;
 }
+
 
 .product .text .options h4{
   font-size: 25px;

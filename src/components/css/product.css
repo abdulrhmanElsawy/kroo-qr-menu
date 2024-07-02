@@ -77,6 +77,8 @@
     color: #fff;
     border: none;
     outline: none;
+    background-color: #ffc83d !important;
+    color: #241f21 !important;
 }
 
 .product-page .product-content .add-min div span{
@@ -149,6 +151,8 @@
     gap: 5px;
     font-size: 15px;
     flex-direction: row-reverse;
+    background-color: #ffc83d !important;
+    color: #241f21 !important;
 }
 
 .product-page .product-content .options h4{
