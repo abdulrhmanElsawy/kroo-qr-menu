@@ -1,8 +1,8 @@
 import './css/downnav.css';
 import { Link as RouterLink } from 'react-router-dom';
-import { useLocation,useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import $ from 'jquery';
+import { useHistory } from 'react-router-dom';
 
 function DownNav() {
     const { pathname } = useLocation();
