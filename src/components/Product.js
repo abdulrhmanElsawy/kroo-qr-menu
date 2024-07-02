@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import './css/product.css';
+
+import $ from 'jquery'
 import ProductImg1 from './images/products/1.webp';
 import ProductImg2 from './images/products/2.webp';
 import ProductImg3 from './images/products/3.webp';
@@ -170,6 +172,13 @@ function Product() {
     
         localStorage.setItem('bookmarkedProducts', JSON.stringify(bookmarkedProducts));
 
+        $(".notification h4").addClass("active");
+
+        setTimeout(()=>{
+        $(".notification h4").removeClass("active");
+
+        },2000)
+
         
     };
 
@@ -242,6 +251,9 @@ function Product() {
                             <span> Total Price</span>
                             <h6>{totalPrice.toFixed(2)}</h6> L.E
                         </h4>
+                    </div>
+                    <div className='notification'>
+                        <h4> successfully added to your bookmarks <i class="las la-check-circle"></i></h4>
                     </div>
 
                     <div className='section-header'></div>

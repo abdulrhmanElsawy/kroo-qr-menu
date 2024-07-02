@@ -15,9 +15,15 @@ function DownNav() {
         window.scrollTo(0, 0);
     }, [pathname]);
 
+
     useEffect(() => {
+        let bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
+        
         const handleBookmarkClick = () => {
-            navigate(pathname);
+            setTimeout(() => {
+                bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
+
+            }, 1000); // Timeout set to 3 seconds (3000 milliseconds)
         };
 
         $('.add-to-bookmark').click(handleBookmarkClick);
@@ -25,11 +31,8 @@ function DownNav() {
         return () => {
             $('.add-to-bookmark').off('click', handleBookmarkClick);
         };
-    }, [pathname, navigate]);
 
-    useEffect(() => {
-        const bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-        
+
         // Calculate total quantity of all products
         let totalQuantity = 0;
         bookmarkedProducts.forEach(product => {
@@ -38,6 +41,8 @@ function DownNav() {
 
         // Set the total quantity as numBookmarkedProducts
         setNumBookmarkedProducts(totalQuantity);
+
+
     }, []);
 
     const location = useLocation();
