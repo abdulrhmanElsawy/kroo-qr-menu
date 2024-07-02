@@ -148,7 +148,7 @@ function CatProducts() {
                     {categories.map(category => (
                         <div key={category.id} className='category-section'>
                             <div className='section-header'>
-                                <RouterLink to={`/kroo-qr-menu/category?id=${category.id}`}>
+                                <RouterLink to={`/category?id=${category.id}`}>
                                     <i className="las la-angle-right"></i> show all
                                 </RouterLink>
                                 <h1>{category.name}</h1>
@@ -157,12 +157,12 @@ function CatProducts() {
                                 {products.filter(product => product.categoryId === category.id).map(product => (
                                     <div className='col-lg-4 col-md-12 col-sm-12 col-12' key={product.id}>
                                         <div className='cat-product' data-id={product.id}>
-                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <RouterLink to={`/product?id=${product.id}`}>
                                                 <img src={product.img} alt='product img' 
                                                     className={animateProduct === product.id ? 'animate-to-bookmark' : ''} />
                                             </RouterLink>
                                             <div className='text'>
-                                                <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                                <RouterLink to={`/product/${product.id}`}>
                                                     <h2>{product.name}</h2>
                                                 </RouterLink>
                                                 <div className='rate'>
@@ -174,7 +174,7 @@ function CatProducts() {
                                                     <h4 className='price'>
                                                         <span> L.E </span> <h6>{product.price}</h6>
                                                     </h4>
-                                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                                    <RouterLink to={`/product?id=${product.id}`}>
                                                     <i className="las la-plus"></i></RouterLink>
                                                 </div>
                                             </div>

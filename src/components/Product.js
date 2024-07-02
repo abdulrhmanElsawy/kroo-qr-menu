@@ -36,9 +36,9 @@ const product_features = [
     { id: 1, name: 'size' },
     { id: 2, name: 'size' },
     { id: 3, name: 'size' },
-    { id: 5, name: 'size' },
+    { id: 4, name: 'size' },
 
-    { id: 4, name: 'extra' }
+    { id: 5, name: 'extra' }
 ];
 
 const product_sub_features = [
@@ -83,9 +83,9 @@ const products = [
     { id: 24, name: 'sunshine mint', integ : 'No adds', price: 65, img: ProductImg24, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
     { id: 25, name: 'soft drink', integ : 'No adds', price: 25, img: ProductImg25, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
     { id: 26, name: 'ice tea', integ : 'No adds', price: 55, img: ProductImg26, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
-    { id: 27, name: 'water', integ : 'No adds', price: 15, img: ProductImg27, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 27, name: 'water', integ : 'No adds', price: 15, img: ProductImg27, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ ] },
     { id: 28, name: 'strawberry tango', integ : 'No adds', price: 70, img: ProductImg28, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
-    { id: 29, name: 'redbull', integ : 'No adds', price: 55, img: ProductImg29, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 29, name: 'redbull', integ : 'No adds', price: 55, img: ProductImg29, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ ] },
     { id: 30, name: 'ice spanish latte', integ : 'No adds', price: 75, img: ProductImg30, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
 ];
 

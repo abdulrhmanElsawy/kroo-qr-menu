@@ -130,7 +130,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 40px;
-    direction: ltr;
+    direction: rtl;
 }
 
 .product-page .product-content .options button{

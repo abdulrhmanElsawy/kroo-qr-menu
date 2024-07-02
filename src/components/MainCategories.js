@@ -104,7 +104,7 @@ function MainCategories() {
             <section className='main-categories'>
                 <div className='container'>
                     <div className='section-header'>
-                        <RouterLink to="/kroo-qr-menu/categories"></RouterLink>
+                        <RouterLink to="/categories"></RouterLink>
                         <h1> Categories </h1>
                     </div>
                     <div className='slider'>
@@ -122,7 +122,7 @@ function MainCategories() {
                             {categories.map((category) => (
                                 <SwiperSlide key={category.id}>
                                     <div className='category'>
-                                        <RouterLink to={`/kroo-qr-menu/category?id=${category.id}`}>
+                                        <RouterLink to={`/category?id=${category.id}`}>
                                             <img src={category.img} alt={category.name} />
                                             <div className='text'>
                                                 <h2>{category.name}</h2>

@@ -108,7 +108,7 @@ function PopProductsSlider() {
         <section className='pop-products'>
             <div className='container'>
                 <div className='section-header'>
-                    <RouterLink to="/kroo-qr-menu/popular-products">
+                    <RouterLink to="/popular-products">
                         <i className="las la-angle-right"></i> Show All 
                     </RouterLink>
                     <h1>Popular Products</h1>
@@ -128,13 +128,13 @@ function PopProductsSlider() {
                         {products.map((product, index) => (
                             <SwiperSlide key={index}>
                                 <div className='product'>
-                                    <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                    <RouterLink to={`/product?id=${product.id}`}>
                                         <img src={product.img} alt='product img' 
                                             className={animateProduct === product.id ? 'animate-to-bookmark' : ''}
                                         />
                                     </RouterLink>
                                     <div className='text'>
-                                        <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                        <RouterLink to={`/product?id=${product.id}`}>
                                             <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
@@ -142,7 +142,7 @@ function PopProductsSlider() {
                                         </div>
                                         <div className='options'>
                                             <h4 className='price'><span>L.E</span> <h6>{product.price}</h6></h4>
-                                            <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>
+                                            <RouterLink to={`/product?id=${product.id}`}>
                                             <i className="las la-plus"></i></RouterLink>
                                         </div>
                                     </div>

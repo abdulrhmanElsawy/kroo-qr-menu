@@ -29,7 +29,7 @@ return (
 
             <Routes>
 
-            <Route path="/kroo-qr-menu/" element={
+            <Route path="/" element={
                 <>
                 <Badge />
                 <Header />
@@ -46,7 +46,7 @@ return (
             } />
 
 
-            <Route path="/kroo-qr-menu/popular-products" element={
+            <Route path="/popular-products" element={
                 <>
                 <Badge />
 
@@ -62,7 +62,7 @@ return (
 
 
             
-            <Route path="/kroo-qr-menu/category" element={
+            <Route path="/category" element={
                 <>
                 <Badge />
 
@@ -77,7 +77,7 @@ return (
             } />
 
 
-        <Route path="/kroo-qr-menu/product" element={
+        <Route path="/product" element={
                 <>
                 <Badge />
 
@@ -92,7 +92,7 @@ return (
 
 
             
-        <Route path="/kroo-qr-menu/bookmark" element={
+        <Route path="/bookmark" element={
                 <>
                 <Badge />
 
