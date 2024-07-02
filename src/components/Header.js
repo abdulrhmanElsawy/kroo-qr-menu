@@ -78,35 +78,35 @@ function Header(){
                             </li>
 
                             <li>
-                                <a href='#' target='_blnak'>
+                                <a href='https://www.facebook.com/KROO.CC/' target='_blnak'>
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <a href='#' target='_blnak'>
                                     <i class="fa-brands fa-x-twitter"></i>
                                 </a>
-                            </li>
+                            </li> */}
 
                             
                             <li>
-                                <a href='#' target='_blnak'>
+                                <a href='https://www.instagram.com/kroo.cc/' target='_blnak'>
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
-
+{/* 
                             <li>
                                 <a href='#' target='_blnak'>
                                 <i class="fa-brands fa-tiktok"></i>
                                 </a>
-                            </li>
+                            </li> */}
 
-                            <li>
+                            {/* <li>
                                 <a href='#' target='_blnak'>
                                 <i class="fa-brands fa-youtube"></i>
                                 </a>
-                            </li>
+                            </li> */}
 
                         </ul>
                     </div>
