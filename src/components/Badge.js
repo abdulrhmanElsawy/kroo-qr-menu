@@ -5,8 +5,9 @@ function Badge() {
     const [badgeClass, setBadgeClass] = useState('silver');
 
     useEffect(() => {
-        // Get the visit count from local storage
+        // Get the visit count and last visit date from local storage
         let visitCount = localStorage.getItem('visitCount');
+        let lastVisitDate = localStorage.getItem('lastVisitDate');
 
         if (visitCount === null) {
             visitCount = 0;
@@ -14,8 +15,15 @@ function Badge() {
             visitCount = parseInt(visitCount, 10);
         }
 
-        // Increment the visit count
-        visitCount += 1;
+        // Get today's date
+        const today = new Date().toISOString().split('T')[0];
+
+        // Increment the visit count if the user visits on a new day
+        if (lastVisitDate !== today) {
+            visitCount += 1;
+            // Store today's date as the last visit date
+            localStorage.setItem('lastVisitDate', today);
+        }
 
         // Store the updated visit count in local storage
         localStorage.setItem('visitCount', visitCount);
