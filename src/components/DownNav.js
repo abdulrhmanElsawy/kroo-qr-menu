@@ -1,6 +1,6 @@
 import './css/downnav.css';
 import { Link as RouterLink } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import $ from 'jquery';
 
@@ -8,6 +8,7 @@ function DownNav() {
     const { pathname } = useLocation();
     const [numBookmarkedProducts, setNumBookmarkedProducts] = useState(0);
     const [stateChange, setStateChange] = useState(1);
+    const history = useHistory();
 
     useEffect(() => {
         window.scrollTo(0, 0);
