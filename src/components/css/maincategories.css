@@ -15,8 +15,8 @@
     border-radius: 15px;
 }
 
-.main-categories .category a .text{
-    background-color: #ffffff8c;
+.main-categories .category a .text {
+    background-color: #00000094;
     position: absolute;
     z-index: 2;
     bottom: 15px;
@@ -25,19 +25,27 @@
     width: 94%;
     padding: 15px;
     border-radius: 15px;
+    direction: ltr;
+    text-align: left;
+    color: #fff;
 }
 
-.main-categories .category a .text h2{
+
+.main-categories .category a .text h2 {
     margin: 0;
     font-size: 19px;
-    font-weight: 600;
-    color: #000;
-    text-align: right;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    text-transform: capitalize;
 }
-.main-categories .category a .text h3{
-    text-align: right;
-    font-size: 19px;
-    color: #000;
-    font-weight: 500;
+
+
+.main-categories .category a .text h3 {
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
     margin-top: 2px;
+    text-transform: capitalize;
 }
