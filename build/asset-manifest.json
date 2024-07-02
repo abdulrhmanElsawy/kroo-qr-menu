@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kroo-qr-menu/static/css/main.3e2d3397.css",
-    "main.js": "/kroo-qr-menu/static/js/main.b97cfe36.js",
+    "main.css": "/kroo-qr-menu/static/css/main.96a54dd3.css",
+    "main.js": "/kroo-qr-menu/static/js/main.c2d6da9b.js",
     "static/js/787.4ac005e2.chunk.js": "/kroo-qr-menu/static/js/787.4ac005e2.chunk.js",
     "static/media/15.webp": "/kroo-qr-menu/static/media/15.848c2725a0d4e1ab0d23.webp",
     "static/media/1.webp": "/kroo-qr-menu/static/media/1.5f95966178319fbdb61b.webp",
@@ -35,12 +35,12 @@
     "static/media/19.webp": "/kroo-qr-menu/static/media/19.46c1baceb3c44e1a8709.webp",
     "static/media/28.webp": "/kroo-qr-menu/static/media/28.15f08bbdefea08eb43a9.webp",
     "index.html": "/kroo-qr-menu/index.html",
-    "main.3e2d3397.css.map": "/kroo-qr-menu/static/css/main.3e2d3397.css.map",
-    "main.b97cfe36.js.map": "/kroo-qr-menu/static/js/main.b97cfe36.js.map",
+    "main.96a54dd3.css.map": "/kroo-qr-menu/static/css/main.96a54dd3.css.map",
+    "main.c2d6da9b.js.map": "/kroo-qr-menu/static/js/main.c2d6da9b.js.map",
     "787.4ac005e2.chunk.js.map": "/kroo-qr-menu/static/js/787.4ac005e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e2d3397.css",
-    "static/js/main.b97cfe36.js"
+    "static/css/main.96a54dd3.css",
+    "static/js/main.c2d6da9b.js"
   ]
 }
