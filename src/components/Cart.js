@@ -61,7 +61,6 @@ function Cart() {
                                         
                                         <div className='options'>
                                             <h4 className='price'> <span> L.E </span> {item.price} </h4>
-                                            <span className='quantity'> {item.quantity} </span>
                                         </div>
                                     </div>
                                 </div>

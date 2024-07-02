@@ -273,6 +273,10 @@ function Product() {
                             <h3>{totalPrice.toFixed(2)} L.E</h3>
                         </h4>
                     </div>
+
+                    <div className='notification'>
+                        <h4> successfully added to your bookmarks <i class="las la-check-circle"></i></h4>
+                    </div>
                 </div>
             </section>
         </>
