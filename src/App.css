@@ -133,9 +133,10 @@ button{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 18px;
+  margin-top: 0;
   direction: ltr;
 }
+
 
 
 .product .text .options h4{
