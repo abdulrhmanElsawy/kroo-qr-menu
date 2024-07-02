@@ -72,7 +72,7 @@ function Header(){
                             
                         <ul>
                             <li>
-                                <a href='#' target='_blnak'>
+                                <a href='https://maps.app.goo.gl/EeThXNVSJbokqtUV7' target='_blnak'>
                                     <i class="fa-solid fa-location-dot"></i>
                                 </a>
                             </li>
