@@ -114,8 +114,12 @@ function PopularProducts() {
                                             <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
-                                            <h3><i className="las la-star"></i> {product.rating} <span> ({product.reviews}) </span></h3>
-                                        </div>
+<h3>
+                                            {Array.from({ length: product.rating }, (_, i) => (
+                                                <i key={i} className="las la-star"></i>
+                                            ))}
+                                            <span> ({product.reviews}) </span>
+                                        </h3>                                             </div>
                                         <div className='options'>
                                             <h4 className='price'> <span> L.E </span> {product.price} </h4>
                                             <RouterLink to={`/kroo-qr-menu/product?id=${product.id}`}>

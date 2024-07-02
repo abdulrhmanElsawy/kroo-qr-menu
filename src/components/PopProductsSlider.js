@@ -138,7 +138,12 @@ function PopProductsSlider() {
                                             <h2>{product.name}</h2>
                                         </RouterLink>
                                         <div className='rate'>
-                                            <h3><i className="las la-star"></i> {product.rating} <span>({product.reviews})</span></h3>
+                                            <h3>
+                                            {Array.from({ length: product.rating }, (_, i) => (
+                                                <i key={i} className="las la-star"></i>
+                                            ))}
+                                            <span> ({product.reviews}) </span>
+                                        </h3>     
                                         </div>
                                         <div className='options'>
                                             <h4 className='price'><span>L.E</span> <h6>{product.price}</h6></h4>
