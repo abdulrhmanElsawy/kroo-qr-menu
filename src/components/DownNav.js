@@ -8,45 +8,41 @@ import $ from 'jquery';
 function DownNav() {
     const { pathname } = useLocation();
     const [numBookmarkedProducts, setNumBookmarkedProducts] = useState(0);
-    const [stateChange, setStateChange] = useState(1);
-    const navigate = useNavigate();
+    const [bookmarkedProducts, setBookmarkedProducts] = useState(
+        JSON.parse(localStorage.getItem('bookmarkedProducts')) || []
+    );
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-
     useEffect(() => {
-        let bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-        
         const handleBookmarkClick = () => {
             setTimeout(() => {
-                bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-
-            }, 1000); // Timeout set to 3 seconds (3000 milliseconds)
+                setBookmarkedProducts(JSON.parse(localStorage.getItem('bookmarkedProducts')) || []);
+            }, 300); // Timeout set to 1 second (1000 milliseconds)
         };
 
-        $('.add-to-bookmark').click(handleBookmarkClick);
+        document.querySelectorAll('.add-to-bookmark').forEach(element => {
+            element.addEventListener('click', handleBookmarkClick);
+        });
 
         return () => {
-            $('.add-to-bookmark').off('click', handleBookmarkClick);
+            document.querySelectorAll('.add-to-bookmark').forEach(element => {
+                element.removeEventListener('click', handleBookmarkClick);
+            });
         };
+    }, []);
 
-
-        // Calculate total quantity of all products
+    useEffect(() => {
         let totalQuantity = 0;
         bookmarkedProducts.forEach(product => {
             totalQuantity += product.quantity || 0; // Ensure to handle cases where quantity may be undefined
         });
-
-        // Set the total quantity as numBookmarkedProducts
         setNumBookmarkedProducts(totalQuantity);
+    }, [bookmarkedProducts]);
 
-
-    }, []);
-
-    const location = useLocation();
-    const currentPath = location.pathname;
+    const currentPath = pathname;
 
     const isActive = (path) => {
         return currentPath === path ? 'active' : '';
