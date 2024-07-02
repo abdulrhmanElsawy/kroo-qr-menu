@@ -52,6 +52,7 @@ function Cart() {
                                     </button>
                                     <RouterLink to={item.link}>
                                         <img src={item.img} alt='product img' />
+                                        
                                     </RouterLink>
                                     <div className='text'>
                                         <RouterLink to={item.link}>
@@ -64,6 +65,9 @@ function Cart() {
                                         </div>
                                     </div>
                                 </div>
+
+                                <span className='quantity'> {item.features} </span>
+
                             </div>
                         ))}
                         <h4 className='subtotal'><span> Sub Total </span> {subtotal} L.E</h4>

@@ -59,36 +59,36 @@ const product_sub_features = [
 ];
 
 const products = [
-    { id: 1, name: 'espresso', integ : 'No adds', price: 30, img: ProductImg1, rating: 5, reviews: 15, categoryId: 1,feature_ids: [3, 5] },
-    { id: 2, name: 'americano', integ : 'No adds', price: 50, img: ProductImg2, rating: 5, reviews: 40, categoryId: 1, feature_ids: [1, 5] },
-    { id: 3, name: 'machiato', integ : 'No adds', price: 45, img: ProductImg3, rating: 5, reviews: 12, categoryId: 1, feature_ids: [2, 5] },
-    { id: 4, name: 'turkish coffee', integ : 'No adds', price: 40, img: ProductImg4, rating: 5, reviews: 125, categoryId: 1, feature_ids: [2, 5] },
-    { id: 5, name: 'turkish hazelnut', integ : 'No adds', price: 50, img: ProductImg5, rating: 5, reviews: 17, categoryId: 1, feature_ids: [ 5] },
-    { id: 6, name: 'french coffee', integ : 'No adds', price: 50, img: ProductImg6, rating: 5, reviews: 19, categoryId: 1, feature_ids: [ 5] },
-    { id: 7, name: 'cappuccino', integ : 'No adds', price: 60, img: ProductImg7, rating: 5, reviews: 30, categoryId: 1, feature_ids: [1, 5] },
-    { id: 8, name: 'latte', integ : 'No adds', price: 60, img: ProductImg8, rating: 5, reviews: 40, categoryId: 1, feature_ids: [1, 5] },
-    { id: 9, name: 'flat white', integ : 'No adds', price: 65, img: ProductImg9, rating: 5, reviews: 20, categoryId: 1, feature_ids: [2, 5] },
-    { id: 10, name: 'mocha', integ : 'No adds', price: 50, img: ProductImg10, rating: 5, reviews: 70, categoryId: 1, feature_ids: [2, 5] },
-    { id: 11, name: 'tea', integ : 'No adds', price: 20, img: ProductImg11, rating: 5, reviews: 50, categoryId: 1, feature_ids: [4, 5] },
-    { id: 12, name: 'nescafe', integ : 'No adds', price: 30, img: ProductImg12, rating: 5, reviews: 25, categoryId: 1, feature_ids: [ 5] },
-    { id: 13, name: 'sahlab', integ : 'No adds', price: 50, img: ProductImg13, rating: 5, reviews: 27, categoryId: 1, feature_ids: [2, 5] },
-    { id: 14, name: 'spanish latte', integ : 'No adds', price: 65, img: ProductImg14, rating: 5, reviews: 24, categoryId: 1, feature_ids: [ 5] },
-    { id: 15, name: 'hot chocolate', integ : 'No adds', price: 60, img: ProductImg15, rating: 5, reviews: 17, categoryId: 1, feature_ids: [2, 5] },
-    { id: 16, name: 'ice mocha', integ : 'No adds', price: 70, img: ProductImg16, rating: 5, reviews: 29, categoryId: 2, feature_ids: [2, 5] },
-    { id: 17, name: 'ice latte', integ : 'No adds', price: 65, img: ProductImg17, rating: 5, reviews: 50, categoryId: 2, feature_ids: [ 5] },
-    { id: 18, name: 'frappuccino', integ : 'No adds', price: 65, img: ProductImg18, rating: 5, reviews: 17, categoryId: 2, feature_ids: [ 5] },
-    { id: 19, name: 'latte frappe', integ : 'No adds', price: 65, img: ProductImg19, rating: 5, reviews: 19, categoryId: 2, feature_ids: [ 5] },
-    { id: 20, name: 'mocha frappe', integ : 'No adds', price: 65, img: ProductImg20, rating: 5, reviews: 20, categoryId: 2, feature_ids: [ 5] },
-    { id: 21, name: 'smoothie', integ : 'No adds', price: 60, img: ProductImg21, rating: 5, reviews: 17, categoryId: 2, feature_ids: [ 5] },
-    { id: 22, name: 'lemon mint', integ : 'No adds', price: 50, img: ProductImg22, rating: 5, reviews: 16, categoryId: 2, feature_ids: [ 5] },
-    { id: 23, name: 'mohito', integ : 'No adds', price: 60, img: ProductImg23, rating: 5, reviews: 111, categoryId: 2, feature_ids: [ 5] },
-    { id: 24, name: 'sunshine mint', integ : 'No adds', price: 65, img: ProductImg24, rating: 5, reviews: 17, categoryId: 2, feature_ids: [ 5] },
-    { id: 25, name: 'soft drink', integ : 'No adds', price: 25, img: ProductImg25, rating: 5, reviews: 13, categoryId: 2, feature_ids: [ 5] },
-    { id: 26, name: 'ice tea', integ : 'No adds', price: 55, img: ProductImg26, rating: 5, reviews: 20, categoryId: 2, feature_ids: [ 5] },
-    { id: 27, name: 'water', integ : 'No adds', price: 15, img: ProductImg27, rating: 5, reviews: 82, categoryId: 2, feature_ids: [ ] },
-    { id: 28, name: 'strawberry tango', integ : 'No adds', price: 70, img: ProductImg28, rating: 5, reviews: 70, categoryId: 2, feature_ids: [ 5] },
-    { id: 29, name: 'redbull', integ : 'No adds', price: 55, img: ProductImg29, rating: 5, reviews: 40, categoryId: 2, feature_ids: [ ] },
-    { id: 30, name: 'ice spanish latte', integ : 'No adds', price: 75, img: ProductImg30, rating: 5, reviews: 20, categoryId: 2, feature_ids: [ 5] },
+    { id: 1, name: 'espresso', integ : 'No adds', price: 30, img: ProductImg1, rating: 5, reviews: 1, categoryId: 1,feature_ids: [3, 5] },
+    { id: 2, name: 'americano', integ : 'No adds', price: 50, img: ProductImg2, rating: 5, reviews: 1, categoryId: 1, feature_ids: [1, 5] },
+    { id: 3, name: 'machiato', integ : 'No adds', price: 45, img: ProductImg3, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 4, name: 'turkish coffee', integ : 'No adds', price: 40, img: ProductImg4, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 5, name: 'turkish hazelnut', integ : 'No adds', price: 50, img: ProductImg5, rating: 5, reviews: 1, categoryId: 1, feature_ids: [ 5] },
+    { id: 6, name: 'french coffee', integ : 'No adds', price: 50, img: ProductImg6, rating: 5, reviews: 1, categoryId: 1, feature_ids: [ 5] },
+    { id: 7, name: 'cappuccino', integ : 'No adds', price: 60, img: ProductImg7, rating: 5, reviews: 1, categoryId: 1, feature_ids: [1, 5] },
+    { id: 8, name: 'latte', integ : 'No adds', price: 60, img: ProductImg8, rating: 5, reviews: 1, categoryId: 1, feature_ids: [1, 5] },
+    { id: 9, name: 'flat white', integ : 'No adds', price: 65, img: ProductImg9, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 10, name: 'mocha', integ : 'No adds', price: 50, img: ProductImg10, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 11, name: 'tea', integ : 'No adds', price: 20, img: ProductImg11, rating: 5, reviews: 1, categoryId: 1, feature_ids: [4, 5] },
+    { id: 12, name: 'nescafe', integ : 'No adds', price: 30, img: ProductImg12, rating: 5, reviews: 1, categoryId: 1, feature_ids: [ 5] },
+    { id: 13, name: 'sahlab', integ : 'No adds', price: 50, img: ProductImg13, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 14, name: 'spanish latte', integ : 'No adds', price: 65, img: ProductImg14, rating: 5, reviews: 1, categoryId: 1, feature_ids: [ 5] },
+    { id: 15, name: 'hot chocolate', integ : 'No adds', price: 60, img: ProductImg15, rating: 5, reviews: 1, categoryId: 1, feature_ids: [2, 5] },
+    { id: 16, name: 'ice mocha', integ : 'No adds', price: 70, img: ProductImg16, rating: 5, reviews: 1, categoryId: 2, feature_ids: [2, 5] },
+    { id: 17, name: 'ice latte', integ : 'No adds', price: 65, img: ProductImg17, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 18, name: 'frappuccino', integ : 'No adds', price: 65, img: ProductImg18, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 19, name: 'latte frappe', integ : 'No adds', price: 65, img: ProductImg19, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 20, name: 'mocha frappe', integ : 'No adds', price: 65, img: ProductImg20, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 21, name: 'smoothie', integ : 'No adds', price: 60, img: ProductImg21, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 22, name: 'lemon mint', integ : 'No adds', price: 50, img: ProductImg22, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 23, name: 'mohito', integ : 'No adds', price: 60, img: ProductImg23, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 24, name: 'sunshine mint', integ : 'No adds', price: 65, img: ProductImg24, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 25, name: 'soft drink', integ : 'No adds', price: 25, img: ProductImg25, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 26, name: 'ice tea', integ : 'No adds', price: 55, img: ProductImg26, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 27, name: 'water', integ : 'No adds', price: 15, img: ProductImg27, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ ] },
+    { id: 28, name: 'strawberry tango', integ : 'No adds', price: 70, img: ProductImg28, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
+    { id: 29, name: 'redbull', integ : 'No adds', price: 55, img: ProductImg29, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ ] },
+    { id: 30, name: 'ice spanish latte', integ : 'No adds', price: 75, img: ProductImg30, rating: 5, reviews: 1, categoryId: 2, feature_ids: [ 5] },
 ];
 
 function Product() {
@@ -107,19 +107,24 @@ function Product() {
     const [basePrice] = useState(product ? product.price : 0); // Initial base price from the product
     const [sizePrice, setSizePrice] = useState(0);
     const [totalPrice, setTotalPrice] = useState(basePrice);
-    const [rating, setRating] = useState(0);
-    const [hover, setHover] = useState(0);
     const [selectedFeaturePrices, setSelectedFeaturePrices] = useState({}); // State to track the selected feature prices
-
-    const [stateChange, setStateChange] = useState(1);
-
-
+    const [selectedFeatures, setSelectedFeatures] = useState({}); // State to track the selected features
+    const [textfeatures, settextfeatures] = useState(''); // State to track the selected features
 
     useEffect(() => {
         // Calculate and update the total price
         const selectedFeaturePrice = Object.values(selectedFeaturePrices).reduce((acc, price) => acc + price, 0);
         setTotalPrice((basePrice + sizePrice + selectedFeaturePrice) * quantity);
     }, [quantity, sizePrice, basePrice, selectedFeaturePrices]);
+
+    useEffect(() => {
+        // Update the notes text
+        const notesText = Object.entries(selectedFeatures)
+            .map(([featureId, subFeature]) => `${subFeature.name}`)
+            .join(', ');
+        document.querySelector('.text-notes').innerText = `${quantity} x ${notesText}`;
+        settextfeatures(`${quantity} x ${notesText}`)
+    }, [selectedFeatures, quantity]);
 
     const handleIncrease = () => {
         setQuantity(prevQuantity => prevQuantity + 1);
@@ -136,26 +141,37 @@ function Product() {
 
     const handleFeatureChange = (event, featureId) => {
         const selectedFeaturePrice = parseFloat(event.target.dataset.price) || 0;
+        const subFeatureName = event.target.value;
+        const subFeature = product_sub_features.find(sf => sf.name === subFeatureName);
+
         setSelectedFeaturePrices(prevPrices => ({
             ...prevPrices,
             [featureId]: selectedFeaturePrice
+        }));
+
+        setSelectedFeatures(prevFeatures => ({
+            ...prevFeatures,
+            [featureId]: subFeature
         }));
     };
 
     const handleBookmark = () => {
         if (!product) return;
-    
+
         const selectedSizeElement = document.querySelector('input[name="size"]:checked');
         const size = selectedSizeElement ? selectedSizeElement.nextSibling.innerText : 'Default Size';
         const productLink = window.location.pathname;
         const productImage = product.img;
-    
+
         let bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
-    
+
         const existingProduct = bookmarkedProducts.find(p => p.id === product.id);
-    
+
         if (existingProduct) {
             existingProduct.quantity += quantity;
+            existingProduct.price = (parseFloat(existingProduct.price) + totalPrice).toFixed(2);
+            existingProduct.features = (existingProduct.features  +" --- " +textfeatures);
+
         } else {
             const productDetails = {
                 id: product.id, // Store the product ID
@@ -163,34 +179,35 @@ function Product() {
                 quantity: quantity,
                 size: size,
                 price: totalPrice.toFixed(2),
+                features: textfeatures, // Store selected features
                 link: `${productLink}?id=${product.id}`,
                 img: productImage
             };
-    
+
             bookmarkedProducts.push(productDetails);
         }
-    
+
         localStorage.setItem('bookmarkedProducts', JSON.stringify(bookmarkedProducts));
 
         $(".notification h4").addClass("active");
 
         setTimeout(()=>{
-        $(".notification h4").removeClass("active");
+            $(".notification h4").removeClass("active");
+        }, 2000);
 
-        },2000)
-
-        
+        // Reset quantity and selected features
+        setQuantity(1);
+        setSelectedFeaturePrices({});
+        setSelectedFeatures({});
+        document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
     };
-
-    
 
     if (!product) {
         return <div>Product not found</div>;
     }
-
     return (
         <>
-            <section className='product-page'>
+             <section className='product-page'>
                 <img src={product.img} alt='product img' />
                 <div className='product-content'>
                     <h1>{product.name}</h1>
@@ -207,8 +224,6 @@ function Product() {
                             </span>
                         ))
                     }
-
-                        
                     </div>
 
                     <div className='add-min'>
@@ -245,18 +260,19 @@ function Product() {
                         </div>
                     ))}
 
+                    <div className='notes'>
+                        <p className='text-notes'>
+                            1 extra milk, 1 extra cheese
+                        </p>
+                    </div>
+
                     <div className='options'>
                         <button className='add-to-bookmark' onClick={handleBookmark}> <i className="las la-bookmark"></i> Add Order </button>
                         <h4>
                             <span> Total Price</span>
-                            <h6>{totalPrice.toFixed(2)}</h6> L.E
+                            <h3>{totalPrice.toFixed(2)} L.E</h3>
                         </h4>
                     </div>
-                    <div className='notification'>
-                        <h4> successfully added to your bookmarks <i class="las la-check-circle"></i></h4>
-                    </div>
-
-                    <div className='section-header'></div>
                 </div>
             </section>
         </>

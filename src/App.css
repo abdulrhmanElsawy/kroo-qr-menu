@@ -338,3 +338,17 @@ button{
   font-size: 15px !important;
   font-weight: 400 !important;
 }
+
+
+
+.text-notes{
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  padding: 15px;
+  background-color: #eeeeee87;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid #00000021;
+  direction: ltr;
+}
