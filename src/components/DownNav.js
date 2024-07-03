@@ -101,12 +101,12 @@ function DownNav() {
                                 </RouterLink>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <button className="translate-to-arabic" onClick={toggleLanguage}>
                                     <i className="las la-globe"></i>
                                     {isArabic ? 'English' : 'العربية'}
                                 </button>
-                            </li>
+                            </li> */}
 
 
                         </ul>

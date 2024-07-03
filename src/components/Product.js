@@ -35,12 +35,12 @@ import ProductImg29 from './images/products/29.webp';
 import ProductImg30 from './images/products/30.webp';
 
 const product_features = [
-    { id: 1, name: 'size' },
-    { id: 2, name: 'size' },
-    { id: 3, name: 'size' },
-    { id: 4, name: 'size' },
+    { id: 1, name: 'size', mult :'0' },
+    { id: 2, name: 'size', mult :'0' },
+    { id: 3, name: 'size', mult :'0' },
+    { id: 4, name: 'size', mult :'0' },
 
-    { id: 5, name: 'extra' }
+    { id: 5, name: 'extra', mult :'1' }
 ];
 
 const product_sub_features = [
@@ -54,7 +54,6 @@ const product_sub_features = [
     { id: 8, product_feature_id: 4, name: 'large', integ : 'No adds', price: 20 },
     { id: 9, product_feature_id: 5, name: 'Add Milk', integ : 'No adds', price: 15 },
     { id: 10, product_feature_id: 5, name: 'Add Flavor', integ : 'No adds', price: 15 },
-    { id: 11, product_feature_id: 5, name: 'Nothing', integ : 'No adds', price: 0 },
 
 ];
 
@@ -113,17 +112,17 @@ function Product() {
 
     useEffect(() => {
         // Calculate and update the total price
-        const selectedFeaturePrice = Object.values(selectedFeaturePrices).reduce((acc, price) => acc + price, 0);
+        const selectedFeaturePrice = Object.values(selectedFeaturePrices).flat().reduce((acc, price) => acc + price, 0);
         setTotalPrice((basePrice + sizePrice + selectedFeaturePrice) * quantity);
     }, [quantity, sizePrice, basePrice, selectedFeaturePrices]);
-
+    
     useEffect(() => {
-        // Update the notes text
-        const notesText = Object.entries(selectedFeatures)
-            .map(([featureId, subFeature]) => `${subFeature.name}`)
+        const notesText = Object.values(selectedFeatures)
+            .flat()
+            .map(subFeature => subFeature.name)
             .join(', ');
         document.querySelector('.text-notes').innerText = `${quantity} x ${notesText}`;
-        settextfeatures(`${quantity} x ${notesText}`)
+        settextfeatures(`${quantity} x ${notesText}`);
     }, [selectedFeatures, quantity]);
 
     const handleIncrease = () => {
@@ -139,68 +138,97 @@ function Product() {
         setSizePrice(selectedSizePrice);
     };
 
-    const handleFeatureChange = (event, featureId) => {
-        const selectedFeaturePrice = parseFloat(event.target.dataset.price) || 0;
-        const subFeatureName = event.target.value;
-        const subFeature = product_sub_features.find(sf => sf.name === subFeatureName);
-
-        setSelectedFeaturePrices(prevPrices => ({
-            ...prevPrices,
-            [featureId]: selectedFeaturePrice
-        }));
-
-        setSelectedFeatures(prevFeatures => ({
-            ...prevFeatures,
-            [featureId]: subFeature
-        }));
+    const handleFeatureChange = (event, featureId, isMultiple) => {
+        const subFeatureId = parseInt(event.target.value);
+        const subFeature = product_sub_features.find(sf => sf.id === subFeatureId);
+    
+        setSelectedFeaturePrices(prevPrices => {
+            const featurePrices = prevPrices[featureId] || [];
+            if (event.target.checked) {
+                // Add the selected feature price
+                return {
+                    ...prevPrices,
+                    [featureId]: isMultiple ? [...featurePrices, subFeature.price] : [subFeature.price]
+                };
+            } else {
+                // Remove the deselected feature price
+                const newFeaturePrices = isMultiple
+                    ? featurePrices.filter((price, index) => index !== featurePrices.indexOf(subFeature.price))
+                    : [];
+                return {
+                    ...prevPrices,
+                    [featureId]: newFeaturePrices
+                };
+            }
+        });
+    
+        setSelectedFeatures(prevFeatures => {
+            const featureList = prevFeatures[featureId] || [];
+            if (event.target.checked) {
+                // Add the selected feature
+                return {
+                    ...prevFeatures,
+                    [featureId]: isMultiple ? [...featureList, subFeature] : [subFeature]
+                };
+            } else {
+                // Remove the deselected feature
+                const newFeatureList = featureList.filter(feature => feature.id !== subFeatureId);
+                return {
+                    ...prevFeatures,
+                    [featureId]: newFeatureList
+                };
+            }
+        });
     };
 
-    const handleBookmark = () => {
-        if (!product) return;
 
-        const selectedSizeElement = document.querySelector('input[name="size"]:checked');
-        const size = selectedSizeElement ? selectedSizeElement.nextSibling.innerText : 'Default Size';
-        const productLink = window.location.pathname;
-        const productImage = product.img;
 
-        let bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
+const handleBookmark = () => {
+    if (!product) return;
 
-        const existingProduct = bookmarkedProducts.find(p => p.id === product.id);
+    const selectedSizeElement = document.querySelector('input[name="size"]:checked');
+    const size = selectedSizeElement ? selectedSizeElement.nextSibling.innerText : 'Default Size';
+    const productLink = window.location.pathname;
+    const productImage = product.img;
 
-        if (existingProduct) {
-            existingProduct.quantity += quantity;
-            existingProduct.price = (parseFloat(existingProduct.price) + totalPrice).toFixed(2);
-            existingProduct.features = (existingProduct.features  +" --- " +textfeatures);
+    let bookmarkedProducts = JSON.parse(localStorage.getItem('bookmarkedProducts')) || [];
 
-        } else {
-            const productDetails = {
-                id: product.id, // Store the product ID
-                name: product.name,
-                quantity: quantity,
-                size: size,
-                price: totalPrice.toFixed(2),
-                features: textfeatures, // Store selected features
-                link: `${productLink}?id=${product.id}`,
-                img: productImage
-            };
+    const existingProduct = bookmarkedProducts.find(p => p.id === product.id);
 
-            bookmarkedProducts.push(productDetails);
-        }
+    if (existingProduct) {
+        existingProduct.quantity += quantity;
+        existingProduct.price = (parseFloat(existingProduct.price) + totalPrice).toFixed(2);
+        existingProduct.features = (existingProduct.features + " --- " + textfeatures);
 
-        localStorage.setItem('bookmarkedProducts', JSON.stringify(bookmarkedProducts));
+    } else {
+        const productDetails = {
+            id: product.id, // Store the product ID
+            name: product.name,
+            quantity: quantity,
+            size: size,
+            price: totalPrice.toFixed(2),
+            features: textfeatures, // Store selected features
+            link: `${productLink}?id=${product.id}`,
+            img: productImage
+        };
 
-        $(".notification h4").addClass("active");
+        bookmarkedProducts.push(productDetails);
+    }
 
-        setTimeout(()=>{
-            $(".notification h4").removeClass("active");
-        }, 2000);
+    localStorage.setItem('bookmarkedProducts', JSON.stringify(bookmarkedProducts));
 
-        // Reset quantity and selected features
-        setQuantity(1);
-        setSelectedFeaturePrices({});
-        setSelectedFeatures({});
-        document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
-    };
+    $(".notification h4").addClass("active");
+
+    setTimeout(() => {
+        $(".notification h4").removeClass("active");
+    }, 2000);
+
+    // Reset quantity and selected features
+    setQuantity(1);
+    setSelectedFeaturePrices({});
+    setSelectedFeatures({});
+    document.querySelectorAll('input[type="checkbox"]').forEach(input => input.checked = false);
+};
 
     if (!product) {
         return <div>Product not found</div>;
@@ -213,7 +241,12 @@ function Product() {
                     <h1>{product.name}</h1>
 
                     <div className='rate'>
-                        <h3><i className="las la-star"></i> {product.rating} <span> ({product.reviews}) </span></h3>
+                    <h3>
+                                            {Array.from({ length: product.rating }, (_, i) => (
+                                                <i key={i} className="las la-star"></i>
+                                            ))}
+                                            <span> ({product.reviews}) </span>
+                                        </h3>
                     </div>
 
                     <div className='whatsin'>
@@ -236,46 +269,44 @@ function Product() {
                         </div>
                     </div>
 
-                    {features.map(({ id, name }) => (
-                        <div className='integ' key={id}>
-                            <h2>{name}</h2>
-                            <ul>
-                                {subFeatures.find(sf => sf.feature.id === id).subFeatures.map(subFeature => (
-                                    <li key={subFeature.id}>
-                                        <div>
-                                            <input
-                                                type='radio'
-                                                name={`feature-${id}`}
-                                                value={subFeature.name}
-                                                data-price={subFeature.price}
-                                                defaultChecked={subFeature.price === 0}
-                                                onChange={(e) => handleFeatureChange(e, id)}
-                                            />
-                                            <label>{subFeature.name}</label>
-                                        </div>
-                                        <span> + {subFeature.price} L.E </span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-
+                {features.map(({ id, name, mult }) => (
+                    <div className='integ' key={id}>
+                        <h2>{name}</h2>
+                        <ul>
+                            {subFeatures.find(sf => sf.feature.id === id).subFeatures.map(subFeature => (
+                                <li key={subFeature.id}>
+                                    <div>
+                                        <input
+                                            type={mult === '1' ? 'checkbox' : 'radio'}
+                                            name={`feature-${id}`}
+                                            value={subFeature.id}
+                                            data-price={subFeature.price}
+                                            onChange={(event) => handleFeatureChange(event, id, mult === '1')}
+                                        />
+                                        <label>{subFeature.name} ({subFeature.price} EGP)</label>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
                     <div className='notes'>
                         <p className='text-notes'>
                             1 extra milk, 1 extra cheese
                         </p>
                     </div>
 
+                    <div className='notification'>
+                        <h4> successfully added to your bookmarks <i class="las la-check-circle"></i></h4>
+                    </div>
+
+                    
                     <div className='options'>
                         <button className='add-to-bookmark' onClick={handleBookmark}> <i className="las la-bookmark"></i> Add Order </button>
                         <h4>
                             <span> Total Price</span>
                             <h3>{totalPrice.toFixed(2)} L.E</h3>
                         </h4>
-                    </div>
-
-                    <div className='notification'>
-                        <h4> successfully added to your bookmarks <i class="las la-check-circle"></i></h4>
                     </div>
                 </div>
             </section>

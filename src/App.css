@@ -136,9 +136,6 @@ button{
   margin-top: 0;
   direction: ltr;
 }
-
-
-
 .product .text .options h4{
   font-size: 25px;
   font-weight: 600;
@@ -232,12 +229,13 @@ button{
 }
 
 
-.cat-product .text .options {
+.product .text .options {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  direction: rtl;
+  margin-top: 18px;
+  direction: ltr;
 }
 
 .cat-product .text .options h4 {
@@ -308,47 +306,119 @@ button{
 
 
 .notification h4 {
-  position: fixed;
-  bottom: -70px;
-  width: 95%;
-  height: 50px;
-  font-size: 17px;
-  color: #fff;
-  background-color: #4caf50;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-transform: capitalize;
-  gap: 5px;
-  padding: 5px;
-  transition: 0.5s;
+    position: fixed;
+    bottom: -70px;
+    width: 95%;
+    height: 50px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #4caf50;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    gap: 5px;
+    padding: 5px;
+    transition: 0.5s;
 }
 
 .notification h4.active{
-  bottom: 67px;
-  
+    bottom: 67px;
+    
 }
-
-.rate h3 span {
-  color: #adadad;
-  font-size: 15px !important;
-  font-weight: 400 !important;
-}
-
 
 
 .text-notes{
-  width: 100%;
-  text-align: left;
-  font-size: 15px;
-  padding: 15px;
-  background-color: #eeeeee87;
-  font-weight: 500;
-  border-radius: 5px;
-  border: 1px solid #00000021;
-  direction: ltr;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #eeeeee87;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #00000021;
+    direction: ltr;
+}
+
+
+#google_translate_element.active{
+  display: block !important;
+}
+
+.VIpgJd-ZVi9od-xl07Ob-OEVmcd.active{
+  display: block !important;
+
+}
+
+
+
+/* Styling for Radio Buttons */
+input[type="radio"] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #eee; /* Border color */
+  border-radius: 50%; /* Makes it circular */
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="radio"]::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 3px; /* Adjust position */
+  border-radius: 50%;
+  background-color: #ffc83d; /* Radio button fill color */
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hide by default */
+}
+
+input[type="radio"]:checked::after {
+  opacity: 1; /* Show when checked */
+}
+
+
+/* Styling for Checkboxes */
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #eee; /* Border color */
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 2px; /* Adjust position */
+  border: 2px solid #eee; /* Checkbox outer border color */
+  background-color: #fff; /* Checkbox fill color */
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hide by default */
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1; /* Show when checked */
+  background-color: #ffc83d; /* Checkbox fill color when checked */
 }
